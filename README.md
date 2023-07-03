@@ -23,24 +23,26 @@ No caminho `bin/aws-cdk-demo.ts` foi descomentada a linha 14 para automaticament
 Instalado o modulo EC2: `npm install @aws-cdk/aws-ec2`
 
 No caminho `lib/aws-cdk-demo-stack.ts` foi adicionado o codigo abaixo para criar um VPC (Virtual Private Cloud) utilizano o EC2:
-  > import * as ec2 from 'aws-cdk-lib/aws-ec2'; </br>
-  > </br>
-  > constructor(scope: Construct, id: string, props?: cdk.StackProps) { </br>
-  >   super(scope, id, props); </br>
-  >   // We have created the VPC object from the VPC class </br>
-  >   new ec2.Vpc(this, 'mainVPC', { </br>
-  >     // This is where you can define how many AZs you want to use </br>
-  >     maxAzs: 2, </br>
-  >     // This is where you can define the subnet configuration per AZ </br>
-  >     subnetConfiguration: [ </br>
-  >        { </br>
-  >          cidrMask: 24, </br>
-  >          name: 'public-subnet', </br>
-  >          subnetType: ec2.SubnetType.PUBLIC, </br>
-  >        } </br>
-  >     ] </br>
-  >  }); </br>
-  > }` </br>
+```
+  import * as ec2 from 'aws-cdk-lib/aws-ec2';
+
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+    // We have created the VPC object from the VPC class
+    new ec2.Vpc(this, 'mainVPC', {
+      // This is where you can define how many AZs you want to use
+      maxAzs: 2,
+      // This is where you can define the subnet configuration per AZ
+      subnetConfiguration: [
+         {
+           cidrMask: 24,
+           name: 'public-subnet',
+           subnetType: ec2.SubnetType.PUBLIC,
+         }
+      ]
+   });
+  }`
+```
 
   Testar a build: `npm run build`
 
