@@ -41,7 +41,7 @@ No caminho `lib/aws-cdk-demo-stack.ts` foi adicionado o codigo abaixo para criar
          }
       ]
    });
-  }`
+  }
 ```
 
   Testar a build: `npm run build`
