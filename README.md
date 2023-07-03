@@ -17,8 +17,7 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
 Para iniciar o projeto: `cdk init --language typescript`
 
-No caminho `bin/aws-cdk-demo.ts` foi descomentada a linha 14 para automaticamente puxar as credenciais do AWS CLI: </br>
-`env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION }`
+No caminho `bin/aws-cdk-demo.ts` foi descomentada a linha 14 para automaticamente puxar as credenciais do AWS CLI: `env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION }`
 
 Instalado o modulo EC2: `npm install @aws-cdk/aws-ec2`
 
